@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwrsw8hqr5mb4"]
+
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_7oyo4"]
+[ext_resource type="Texture2D" uid="uid://3rh73igooqgh" path="res://Brown.png" id="1_iirgx"]
+[ext_resource type="Texture2D" uid="uid://bf2kau63qa74p" path="res://jumpyjump.png" id="2_4t8ue"]
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_7oyo4")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_iirgx")
+stretch_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -46.0
+offset_right = 220.0
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_4t8ue")
+
+[node name="Start Btn" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.0
+offset_top = 57.0
+offset_right = 76.0
+offset_bottom = 107.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.898039, 0.623529, 0.262745, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.807843, 0.694118, 0.596078, 1)
+theme_override_colors/icon_pressed_color = Color(0.886275, 0.529412, 0.247059, 1)
+theme_override_font_sizes/font_size = 20
+text = "Start Game"
+
+[connection signal="pressed" from="Start Btn" to="." method="_on_start_btn_pressed"]
